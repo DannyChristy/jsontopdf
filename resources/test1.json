@@ -1,0 +1,28 @@
+{
+  "accessibility": {
+    "errorpages": 32.4,
+    "errors": 92.56,
+    "total": 74.22,
+    "warnings": 84.09
+  },
+  "qa": {
+    "content": 54.9,
+    "freshness": 100,
+    "security": 100,
+    "total": 83.5,
+    "ux": 86.1
+  },
+  "seo": {
+    "content": 70.83,
+    "mobile": 83,
+    "technical": 76.55,
+    "total": 77.52,
+    "ux": 87.65
+  },
+  "total": 78.41,
+  "_links": {
+    "self": {
+      "href": "https://api.siteimprove.com/v2/sites/5841970702/dci/overview"
+    }
+  }
+}

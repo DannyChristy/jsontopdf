@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "id": 147019313,
+      "url": "http://v.c",
+      "last_checked": "2018-01-24 04:35:28Z",
+      "link_status_changed": "2018-01-09 13:50:17Z",
+      "message": "Cannot resolve hostname",
+      "pages": 4,
+      "_links": {
+        "pages": {
+          "href": "https://api.siteimprove.com/v2/sites/5841970702/quality_assurance/links/broken_links/147019313/pages"
+        }
+      }
+    },
+    {
+      "id": 147598824,
+      "url": "http://cert.z",
+      "last_checked": "2018-01-24 05:35:40Z",
+      "link_status_changed": "2018-01-16 16:26:50Z",
+      "message": "Cannot resolve hostname",
+      "pages": 4,
+      "_links": {
+        "pages": {
+          "href": "https://api.siteimprove.com/v2/sites/5841970702/quality_assurance/links/broken_links/147598824/pages"
+        }
+      }
+    },
+    {
+      "id": 147591335,
+      "url": "http://hoby.x",
+      "last_checked": "2018-01-24 04:35:28Z",
+      "link_status_changed": "2018-01-16 14:39:28Z",
+      "message": "Cannot resolve hostname",
+      "pages": 3,
+      "_links": {
+        "pages": {
+          "href": "https://api.siteimprove.com/v2/sites/5841970702/quality_assurance/links/broken_links/147591335/pages"
+        }
+      }
+    },
+    {
+      "id": 147584810,
+      "url": "http://preview.siteimprove.moebius.express/corporate/siteimprove/cooking-is-fun-2554",
+      "http_status": 404,
+      "last_checked": "2018-01-24 04:35:30Z",
+      "link_status_changed": "2018-01-17 12:08:21Z",
+      "message": "The remote server returned an error: (404) Not Found.",
+      "pages": 2,
+      "_links": {
+        "pages": {
+          "href": "https://api.siteimprove.com/v2/sites/5841970702/quality_assurance/links/broken_links/147584810/pages"
+        }
+      }
+    },
+    {
+      "id": 147645357,
+      "url": "http://cert.c",
+      "last_checked": "2018-01-24 04:35:28Z",
+      "link_status_changed": "2018-01-17 08:47:26Z",
+      "message": "Cannot resolve hostname",
+      "pages": 2,
+      "_links": {
+        "pages": {
+          "href": "https://api.siteimprove.com/v2/sites/5841970702/quality_assurance/links/broken_links/147645357/pages"
+        }
+      }
+    },
+    {
+      "id": 146971773,
+      "url": "https://preview.siteimprove.moebius.express/corporate/demo/cooking-is-my-passssion-2246",
+      "http_status": 404,
+      "last_checked": "2018-01-24 04:35:32Z",
+      "link_status_changed": "2018-01-10 15:32:40Z",
+      "message": "The remote server returned an error: (404) Not Found.",
+      "pages": 1,
+      "_links": {
+        "pages": {
+          "href": "https://api.siteimprove.com/v2/sites/5841970702/quality_assurance/links/broken_links/146971773/pages"
+        }
+      }
+    },
+    {
+      "id": 146971775,
+      "url": "http://heksd.com",
+      "last_checked": "2018-01-24 04:35:28Z",
+      "link_status_changed": "2018-01-08 16:02:30Z",
+      "message": "Cannot resolve hostname",
+      "pages": 1,
+      "_links": {
+        "pages": {
+          "href": "https://api.siteimprove.com/v2/sites/5841970702/quality_assurance/links/broken_links/146971775/pages"
+        }
+      }
+    },
+    {
+      "id": 147016029,
+      "url": "http://cerk.c",
+      "last_checked": "2018-01-24 04:35:28Z",
+      "link_status_changed": "2018-01-09 13:41:12Z",
+      "message": "Cannot resolve hostname",
+      "pages": 1,
+      "_links": {
+        "pages": {
+          "href": "https://api.siteimprove.com/v2/sites/5841970702/quality_assurance/links/broken_links/147016029/pages"
+        }
+      }
+    },
+    {
+      "id": 147094232,
+      "url": "https://preview.siteimprove.moebius.express/corporate/demo/cooking-is-relaxing-2252",
+      "http_status": 404,
+      "last_checked": "2018-01-24 04:35:29Z",
+      "link_status_changed": "2018-01-10 15:32:40Z",
+      "message": "The remote server returned an error: (404) Not Found.",
+      "pages": 1,
+      "_links": {
+        "pages": {
+          "href": "https://api.siteimprove.com/v2/sites/5841970702/quality_assurance/links/broken_links/147094232/pages"
+        }
+      }
+    },
+    {
+      "id": 147583098,
+      "url": "https://preview.siteimprove.moebius.express/corporate/siteimprove/cooking-is-my-passion--1--2552",
+      "http_status": 404,
+      "last_checked": "2018-01-24 04:35:29Z",
+      "link_status_changed": "2018-01-16 10:31:16Z",
+      "message": "The remote server returned an error: (404) Not Found.",
+      "pages": 1,
+      "_links": {
+        "pages": {
+          "href": "https://api.siteimprove.com/v2/sites/5841970702/quality_assurance/links/broken_links/147583098/pages"
+        }
+      }
+    }
+  ],
+  "total_items": 23,
+  "total_pages": 3,
+  "links": {
+    "next": {
+      "href": "https://api.siteimprove.com/v2/sites/5841970702/quality_assurance/links/broken_links?page=2&page_size=10"
+    },
+    "self": {
+      "href": "https://api.siteimprove.com/v2/sites/5841970702/quality_assurance/links/broken_links?page=1&page_size=10"
+    }
+  },
+  "siteimprove": {
+    "webapp": {
+      "href": "http://my2.siteimprove.com/Auth/Migrate?parameters=site_id=621381&vkey1=8C349F125CEF07E9F0F8D4FB936B30D8&vkey2=none&wgsKey=QA/Links/BrokenLinks"
+    }
+  }
+}
