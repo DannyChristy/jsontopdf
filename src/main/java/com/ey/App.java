@@ -15,7 +15,7 @@ import java.io.IOException;
  */
 public class App 
 {
-    private static File jsonFile;
+    private static File jsonFile=new  File("C:\\app\\DPA\\jsontopdf\\resources\\test1.json");
     private static JFrame jFrame;
     public static GuiWindow window = new GuiWindow();
     private static JsonReader jsonReader = new JsonReader();

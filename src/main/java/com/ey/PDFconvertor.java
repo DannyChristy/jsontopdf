@@ -64,9 +64,23 @@ public class PDFconvertor {
             /*
              * Adding the remaining part of the pdf from JSON
              * */
-            Font font = FontFactory.getFont(FontFactory.COURIER, 10, BaseColor.BLACK);
+            /*Font font = FontFactory.getFont(FontFactory.COURIER, 10, BaseColor.BLACK);
             Chunk chunk = new Chunk("test",font);
-            document.add(chunk);
+            document.add(chunk);*/
+
+            for (Map.Entry<String, Object> jsonEntity:stringObjectMap.entrySet()
+            ){
+                Object jsonEntityValue =  jsonEntity.getValue();
+                if(jsonEntityValue.getClass()==String.class||jsonEntityValue.getClass()==Integer.class){
+                    Paragraph entity =  new Paragraph();
+                    entity.add(jsonEntity.getKey());
+                    entity.add(" : ");
+                    entity.add(jsonEntityValue.toString());
+                    document.add(entity);
+                    System.out.println("Key:"+jsonEntity.getKey()+" ;value : "+jsonEntity.getValue());
+                }
+               // System.out.println(jsonEntity.toString());
+            }
 
             //Chunk mapChunk = new Chunk(stringObjectMap,font);
 
@@ -79,6 +93,10 @@ public class PDFconvertor {
             System.out.println("Writing  not possible");
         }
 
+    }
+
+    private Paragraph serializeObject(Map<Object,Object> objectMap){
+        return null;
     }
     private String getBaseFileName(File file){
         return FilenameUtils.getBaseName(file.getName());

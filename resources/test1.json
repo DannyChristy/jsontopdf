@@ -5,6 +5,120 @@
     "total": 74.22,
     "warnings": 84.09
   },
+  "accessibility1": {
+    "errorpages": 32.4,
+    "errors": 92.56,
+    "total": 74.22,
+    "warnings": 84.09
+  },
+  "accessibility2": {
+    "errorpages": 32.4,
+    "errors": 92.56,
+    "total": 74.22,
+    "warnings": 84.09
+  },
+  "accessibility3": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
+  "accessibility4": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
+  "accessibility5": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
+  "accessibility6": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
+  "accessibilityerter": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
+  "accessibility7": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
+  "accessibility8": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
+  "accessibility9": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
+  "accessibility67": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
+  "accessibility56": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
+  "accessibility35": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
+  "accessibility76": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
+  "accessibility34": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
+  "accessibility23": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
+  "accessibilitydfg": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
+  "accessibilitysdf": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
+  "accessibilitygfh": {
+  "errorpages": 32.4,
+  "errors": 92.56,
+  "total": 74.22,
+  "warnings": 84.09
+},
   "qa": {
     "content": 54.9,
     "freshness": 100,

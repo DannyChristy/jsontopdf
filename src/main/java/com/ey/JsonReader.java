@@ -39,6 +39,7 @@ public class JsonReader {
 
     }
     public Map<String,Object> jsonSerilizer(File jsonFile) throws IOException {
+        jsonFile = new File("C:\\app\\DPA\\jsontopdf\\resources\\test1.json");
         ObjectMapper objectMapper = new ObjectMapper();
         Reader reader = new FileReader(jsonFile);
        // String json =
