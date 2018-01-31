@@ -9,6 +9,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.FileUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -88,6 +90,13 @@ public class PDFGenerator {
 
     File file = new File("C:\\app\\DPA\\jsontopdf\\resources\\test1.json");
     String content = FileUtils.readFileToString(file,"utf-8");
+
+    ObjectMapper objectMapper = new ObjectMapper();
+
+    JsonNode jsonNode = objectMapper.readTree(file);
+
+    System.out.println(jsonNode.asText());
+
 
     JSONParser jsonParser= new JSONParser();
     Object parse = jsonParser.parse(new FileReader("C:\\app\\DPA\\jsontopdf\\resources\\test1.json"));

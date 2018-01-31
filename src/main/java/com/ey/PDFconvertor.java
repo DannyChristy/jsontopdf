@@ -5,41 +5,45 @@ import com.itextpdf.text.pdf.PdfWriter;
 import org.apache.commons.io.FilenameUtils;
 
 import java.io.*;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Stream;
 
 public class PDFconvertor {
-    public File createPDF(String fileName) throws IOException {
-        File file = new File("resources\\"+fileName+".pdf");
-        if(file.exists()){
-            System.out.println("Existing file deleted");
-            file.delete();
-        }
-        boolean fileCreated = file.createNewFile();
-        if(fileCreated){
-            System.out.println("created file" + file.getName());
-            return file;
-        }
-        else{
-            System.out.println("File not created");
-            return null;
-        }
-
+  private static final Map<String,String> PDF_MAP= new HashMap<String, String>();
+  public File createPDF(String fileName) throws IOException {
+    File file = new File("resources\\" + fileName + ".pdf");
+    if (file.exists()) {
+      System.out.println("Existing file deleted");
+      file.delete();
     }
-    public void savePDF (Map<String,Object> stringObjectMap, File jsonFile) throws IOException, DocumentException {
-        File pdfFile = createPDF(getBaseFileName(jsonFile));
-      //  File pdfFile = createPdf(jsonFile.getName());
-        if(pdfFile!=null){
-            FileOutputStream fileOutputStream = new FileOutputStream(pdfFile);
-            Document document = new Document();
-            PdfWriter.getInstance(document, fileOutputStream);
-            document.open();
+    boolean fileCreated = file.createNewFile();
+    if (fileCreated) {
+      System.out.println("created file" + file.getName());
+      return file;
+    }
+    else {
+      System.out.println("File not created");
+      return null;
+    }
+
+  }
+
+  public void savePDF(Map<String, Object> stringObjectMap, File jsonFile) throws IOException, DocumentException {
+    File pdfFile = createPDF(getBaseFileName(jsonFile));
+    //  File pdfFile = createPdf(jsonFile.getName());
+    if (pdfFile != null) {
+      FileOutputStream fileOutputStream = new FileOutputStream(pdfFile);
+      Document document = new Document();
+      PdfWriter.getInstance(document, fileOutputStream);
+      document.open();
 
             /*
              * adding the logo on the pdf
              * */
-            Image image= Image.getInstance("resources/download.png");
-            image.setAlignment(Image.RIGHT);
-            document.add(image);
+      Image image = Image.getInstance("resources/download.png");
+      image.setAlignment(Image.RIGHT);
+      document.add(image);
 
 /*      document.addAuthor("JsonToPdf_program");
       document.addTitle("Doesn't matter");*/
@@ -56,10 +60,10 @@ public class PDFconvertor {
              * adding the title of the pdf file
              *
              * */
-            Paragraph paragraph = new Paragraph();
-            paragraph.add("Main Content");
-            paragraph.setAlignment(Element.ALIGN_CENTER);
-            document.add(paragraph);
+      Paragraph paragraph = new Paragraph();
+      paragraph.add("Main Content");
+      paragraph.setAlignment(Element.ALIGN_CENTER);
+      document.add(paragraph);
 
             /*
              * Adding the remaining part of the pdf from JSON
@@ -68,37 +72,55 @@ public class PDFconvertor {
             Chunk chunk = new Chunk("test",font);
             document.add(chunk);*/
 
-            for (Map.Entry<String, Object> jsonEntity:stringObjectMap.entrySet()
-            ){
-                Object jsonEntityValue =  jsonEntity.getValue();
-                if(jsonEntityValue.getClass()==String.class||jsonEntityValue.getClass()==Integer.class){
-                    Paragraph entity =  new Paragraph();
-                    entity.add(jsonEntity.getKey());
-                    entity.add(" : ");
-                    entity.add(jsonEntityValue.toString());
-                    document.add(entity);
-                    System.out.println("Key:"+jsonEntity.getKey()+" ;value : "+jsonEntity.getValue());
-                }
-               // System.out.println(jsonEntity.toString());
-            }
-
-            //Chunk mapChunk = new Chunk(stringObjectMap,font);
-
-            document.close();
-            System.out.println("pdf written");
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(jsonFile));
+      for (Map.Entry<String, Object> jsonEntity : stringObjectMap.entrySet()
+              ) {
+        if(jsonEntity.getValue().getClass()==java.util.LinkedHashMap.class){
+          //addValuetoPdfMap();
         }
-
-        else{
-            System.out.println("Writing  not possible");
+        Object jsonEntityValue = jsonEntity.getValue();
+        if (jsonEntityValue.getClass() == String.class || jsonEntityValue.getClass() == Integer.class) {
+          Paragraph entity = new Paragraph();
+          entity.add(jsonEntity.getKey());
+          entity.add(" : ");
+          entity.add(jsonEntityValue.toString());
+          document.add(entity);
+          System.out.println("Key:" + jsonEntity.getKey() + " ;value : " + jsonEntity.getValue());
         }
+        // System.out.println(jsonEntity.toString());
+      }
 
+      //Chunk mapChunk = new Chunk(stringObjectMap,font);
+
+      document.close();
+      System.out.println("pdf written");
+      BufferedReader bufferedReader = new BufferedReader(new FileReader(jsonFile));
     }
 
-    private Paragraph serializeObject(Map<Object,Object> objectMap){
-        return null;
+    else {
+      System.out.println("Writing  not possible");
     }
-    private String getBaseFileName(File file){
-        return FilenameUtils.getBaseName(file.getName());
+
+  }
+
+
+
+ /* public static Stream<Object> flatten(Object o) {
+    if (o instanceof Map<?, ?>) {
+      return ((Map<?, ?>) o).values().stream().flatMap(FlatMap::flatten);
     }
+    return Stream.of(o);
+  }*/
+  private void addValuetoPdfMap(Map<String,Object> stringObjectMap){
+
+  }
+
+
+
+  private Paragraph serializeObject(Map<Object, Object> objectMap) {
+    return null;
+  }
+
+  private String getBaseFileName(File file) {
+    return FilenameUtils.getBaseName(file.getName());
+  }
 }
