@@ -1,8 +1,13 @@
 package com.ey;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by vvasund on 31.01.2018.
@@ -50,13 +55,44 @@ public class Student {
     list.add(obj1);
     list.add(obj2);
 
-    List<String> collect =
-            list.stream()
-                    .map(x -> x.getBook())      //Stream<Set<String>>
-                    .flatMap(x -> x.stream())   //Stream<String>
-                    .distinct()
-                    .collect(Collectors.toList());
+    Map<String,Object> stringObjectMap= new HashMap<String,Object>();
+    stringObjectMap.put("key1","value1");
+    stringObjectMap.put("key2","value2");
+    Map<String,Object> innerStringObjectMap = new HashMap<>();
+    innerStringObjectMap.put("i1key3","value3");
+    innerStringObjectMap.put("i1key4","value4");
+    innerStringObjectMap.put("i1key5","value5");
+    stringObjectMap.put("map1",innerStringObjectMap);
+    Map<String,Object> innerStringObjectMap2 = new HashMap<>();
+    innerStringObjectMap.put("i2key6","value6");
+    innerStringObjectMap2.put("i2key7","value7");
+    innerStringObjectMap.put("i1map2",innerStringObjectMap2);
 
-    collect.forEach(x -> System.out.println(x));
+/*    Map<String,Object> collect =
+            stringObjectMap.entrySet().stream()
+                    .map(x -> x.getValue())
+                    .flatMap(x -> x)
+                    .distinct();
+                    //.collect(Collectors.toList());
+
+    collect.forEach(x -> System.out.println(x));*/
+
+    Map<Object, Object> collect = new HashMap<>();
+    stringObjectMap.entrySet()
+            .stream()
+            .flatMap(FlatMap::flatten).forEach(it -> {
+              collect.put(it.getKey(), it.getValue());
+    });
+
+    System.out.println(collect.toString());
+
+
   }
+  static Stream<Object> flatten(Stream<Object> stream) {
+    return stream.flatMap((o) ->
+            (o instanceof Map) ? flatten(((Map<String, Object>)o).values().stream()) : Stream.of(o)
+    );
+  }
+
+
 }

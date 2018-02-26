@@ -1,0 +1,1178 @@
+{
+	"sessionInfo": {
+		"clientName": "CFOspace Open Day",
+		"sessionDescription": "Roadmap Developer",
+		"clientLogoPath": "192.168.1.20\\Public\\share\\"
+	},
+	wallLeftInfo: [
+		{
+			"wallLeftInfoUrlColumn": "https://www.ecb.europa.eu/stats/money_credit_banking/anacredit/html/index.en.html",
+			wallLeftInfoHeadlineColumn: "Problem Statement",
+			"topicInfoTextColmn": [
+				"Need for more detailed statistics covering all Euro area member states, more comparability",
+				"Monitoring developments in different economic sectors",
+				"Governance in terms of macro prudential supervision"
+			]
+		},
+		{
+			"wallLeftInfoUrlColumn": "http://www.ey.com/Publication/vwLUAssets/EY-bcbs-239-risk-data-aggregation-reporting-AU/$FILE/EY-bcbs-239-risk-data-aggregation-reporting-AU.pdf",
+			wallLeftInfoHeadlineColumn: "Typical issues",
+			"topicInfoTextColmn": [
+				"Master data management: Granularity equires high quality data",
+				"Data processing: Higher data volumes to be processed in shorter time",
+				"Organizational processes: Need for development of new data capture"
+			]
+		},
+		{
+			"wallLeftInfoUrlColumn": "https://share.ey.net/sites/FSOPI/Finance/SitePages/Integrated%20Finance%20and%20Risk%20Data%20Model.aspx",
+			wallLeftInfoHeadlineColumn: "Short term solution",
+			"topicInfoTextColmn": [
+				"The EY-logical data model on AnaCredit is available in SAP PowerDesigner and enables: An overview of data in the form of a data modelling and the creation of a corporate repository and glossary"
+			]
+		},
+		{
+			"wallLeftInfoUrlColumn": "https://share.ey.net/sites/FSOPI/Finance/SitePages/ECB%20Reporting%20Framework.aspx",
+			wallLeftInfoHeadlineColumn: "Long term solution",
+			"topicInfoTextColmn": [
+				"Data catalogue for loans within the ECB Reporting Framework",
+				"Cost allocation and reduction with data collection, -QA, -exchange",
+				"Elimination of data gaps",
+				"Establishment of organizational structures"
+			]
+		}
+	],
+	wallLeftInfo: [
+		{
+			"wallLeftInfoUrlColumn": "http://www.ey.com/gl/en/services/advisory/ey-global-information-security-survey-2016",
+			wallLeftInfoHeadlineColumn: "Problem Statement",
+			"topicInfoTextColmn": [
+				"Lack of transparency in regulatory expectations regarding the secure design of IT-systems and related processes",
+				"Rising importance of IT-Governance and information security"
+			]
+		},
+		{
+			"wallLeftInfoUrlColumn": "",
+			wallLeftInfoHeadlineColumn: "Typical issues",
+			"topicInfoTextColmn": [
+				"IT-Strategy not aligned with Business Strategy",
+				"Insufficient and outdated authorization management",
+				"Incomplete IT-Governance (e.g. outsourcing activities)",
+				"Inadequate inclusion of IT risks"
+			]
+		},
+		{
+			"wallLeftInfoUrlColumn": "",
+			wallLeftInfoHeadlineColumn: "Short term solution",
+			"topicInfoTextColmn": [
+				"EY offers you a fast and efficient examination of your IT-Landscape that gives you a more transparent view on your environment, including recommodations for Quick-Win-actions"
+			]
+		},
+		{
+			"wallLeftInfoUrlColumn": "http://www.ey.com/de/de/industries/financial-services/banking---capital-markets/banking-capital-market_advisory",
+			wallLeftInfoHeadlineColumn: "Long term solution",
+			"topicInfoTextColmn": [
+				"EY delivers the whole value-added chain beginning from consulting of IT-landscape conceptions to the final IT-audit of your environment"
+			]
+		}
+	],
+	"interfaceElements": {
+		"timeline": {
+			"begin": "1/1/2018",
+			"end": "12/31/2021"
+		},
+		"rotSlider01": {
+			"min": 0,
+			"max": 100,
+			"label": "Business Value"
+		},
+		"intInput01": {
+			"label": "FTE"
+		},
+		"intInput02": {
+			"label": "Man Days"
+		},
+		"rotSlider02": {
+			"min": 0,
+			"max": 100,
+			"label": "Project Risk"
+		},
+		"horzSlider01": {
+			"min": 0,
+			"max": 100,
+			"label": "Project Size"
+		},
+		"lists": [
+			{
+				"label": "Client IT Landscape",
+				"items": [
+					"ABACUS",
+					"BAIS",
+					"IDL KONSIS",
+					"Murex",
+					"SAP BCA",
+					"SAP BW",
+					"SAP CML",
+					"SAP FI/CO",
+					"SAP FS-PER",
+					"SAP RDL",
+					"SAP SDL",
+					"TORAM",
+					"Placeholder",
+					"Placeholder",
+					"Placeholder"
+				],
+				"maxSelected": 5
+			},
+			{
+				"label": "Data Management",
+				"items": [
+					"Collateral",
+					"Contract",
+					"Counterparty",
+					"Data Governance",
+					"Data Lineage",
+					"Data Management",
+					"Data Model",
+					"Data Quality",
+					"Data Taxonomy",
+					"Facility",
+					"Instrument",
+					"Metadata",
+					"Reference",
+					"Master data",
+					"Placeholder"
+				],
+				"maxSelected": 5
+			},
+			{
+				"label": "Expected Outcome",
+				"items": [
+					"Business Concept",
+					"Demo",
+					"POC (Proof-of Concept)",
+					"Process Change",
+					"Result Document",
+					"System go-live",
+					"Regulatory Reporting",
+					"Placeholder",
+					"Placeholder",
+					"Placeholder",
+					"Placeholder",
+					"Placeholder",
+					"Placeholder",
+					"Placeholder",
+					"Placeholder"
+				],
+				"maxSelected": 5
+			},
+			{
+				"label": "Options",
+				"items": [
+					"Business Analysis",
+					"Decommission",
+					"Development",
+					"Invest",
+					"Keep / Operate",
+					"Renovate",
+					"Placeholder",
+					"Placeholder",
+					"Placeholder",
+					"Placeholder",
+					"Placeholder",
+					"Placeholder",
+					"Placeholder",
+					"Placeholder",
+					"Placeholder"
+				],
+				"maxSelected": 5
+			}
+		],
+		"buttonStack": [
+			{
+				"headline": "Overarching Variables",
+				"button": [
+					"Data",
+					"KPI / Metrics",
+					"Reporting",
+					"Processes / Operations",
+					"Systems"
+				]
+			},
+			{
+				"headline": "Quick Selectors",
+				"button": [
+					"New / Old Project",
+					"EY Input/ Support"
+				]
+			}
+		]
+	},
+	topics: [
+		{
+			"description": "AnaCredit (Analytical credit Dataset) is a project to set up a dataset containing detailed information on individual bank loans in the euro area, harmonised across all Member States.",
+			"tex": "AnaCredit",
+			"questions": [
+				{
+					"description": "This field can be used to a additional Information regarding the question",
+					"text": "What specific actions are required for your organisation to meet the AnaCredit requirements in 2018? ",
+					relevance
+					": 4,
+					"actions": [
+						{
+							"description": "Maintenance of missing master data",
+							"text": "Action 1",
+							"start": "01/01/2018",
+							"end": "01/06/2018",
+							"rotSlider01": 10,
+							"rotSlider02": 80,
+							"horzSlider01": 50,
+							"intInput01": 3,
+							"intInput02": 50,
+							"list01": [
+								true,
+								false,
+								false,
+								true,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false
+							],
+							"list02": [
+								true,
+								false,
+								true,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								true,
+								false
+							],
+							"list03": [
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								true,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false
+							],
+							"list04": [
+								false,
+								false,
+								false,
+								false,
+								true,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false,
+								false
+							],
+							"buttonStack01": [
+								true,
+								false,
+								true,
+								true,
+								false
+							],
+							"buttonStack02": [
+								false,
+								true
+							]
+						},
+						{
+							"description": "This field can be used to a additional Information regarding the question",
+							"text": "Does your AnaCredit reporting ensure alignment with other provident reporting requirements such as FINREP, COREP, IFRS9, BCBS 239? If not, which actions are required to align these reporting requiremens? ",
+							"rlevance": 3,
+							"actions": [
+								{
+									"description": "Set up a Financial Services Data Platform (FSDP)",
+									"text": "Action 1",
+									"start": "01/03/2018",
+									"end": "01/02/2019",
+									"rotSlider01": 90,
+									"rotSlider02": 50,
+									"horzSlider01": 80,
+									"intInput01": 6,
+									"intInput02": 200,
+									"list01": [
+										true,
+										false,
+										false,
+										false,
+										true,
+										true,
+										true,
+										true,
+										true,
+										true,
+										true,
+										false,
+										false,
+										false,
+										false
+									],
+									"list02": [
+										true,
+										false,
+										true,
+										true,
+										true,
+										false,
+										true,
+										true,
+										true,
+										true,
+										false,
+										false,
+										false,
+										true,
+										false
+									],
+									"list03": [
+										false,
+										false,
+										false,
+										true,
+										false,
+										true,
+										false,
+										false,
+										false,
+										false,
+										false,
+										false,
+										false,
+										false,
+										false
+									],
+									"list04": [
+										false,
+										false,
+										true,
+										false,
+										false,
+										false,
+										false,
+										false,
+										false,
+										false,
+										false,
+										false,
+										false,
+										false,
+										false
+									],
+									"buttonStack01": [
+										true,
+										false,
+										false,
+										false,
+										true
+									],
+									"buttonStack02": [
+										false,
+										true
+									]
+								},
+								{
+									"description": "This field can be used to a additional Information regarding the question",
+									"text": "How well prepared are you in terms of ensuring the credibility of the information? Which actions are open to ensure the credibility of the data?",
+									"relvance": 2,
+									"actions": [
+										{
+											"description": "Validate master data with external data sources",
+											"text": "Action 1",
+											"start": "01/01/2018",
+											"end": "01/09/2018",
+											"rotSlider01": 60,
+											"rotSlider02": 80,
+											"horzSlider01": 30,
+											"intInput01": 1,
+											"intInput02": 30,
+											"list01": [
+												true,
+												false,
+												false,
+												false,
+												false,
+												true,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false
+											],
+											"list02": [
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												true,
+												false
+											],
+											"list03": [
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												true,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false
+											],
+											"list04": [
+												false,
+												false,
+												false,
+												false,
+												true,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false,
+												false
+											],
+											"buttonStack01": [
+												true,
+												false,
+												false,
+												false,
+												false
+											],
+											"buttonStack02": [
+												false,
+												true
+											]
+										},
+										{
+											"description": "This field can be used to a additional Information regarding the question",
+											"text": "Are you prepared for the extension of scope in regard to the upcoming stages (1, 2, 3) of future AnaCredit reporting? Which actions are required to cover the scope?",
+											"relevance": 1
+											"actions": [
+												{
+													"description": "Review processes and system architecture",
+													"text": "Action 1",
+													"start": "01/12/2018",
+													"end": "01/03/2020",
+													"rotSlider01": 25,
+													"rotSlider02": 30,
+													"horzSlider01": 40,
+													"intInput01": 2,
+													"intInput02": 50,
+													"list01": [
+														true,
+														false,
+														false,
+														true,
+														true,
+														true,
+														true,
+														true,
+														true,
+														false,
+														false,
+														false,
+														false,
+														false,
+														false
+													],
+													"list02": [
+														false,
+														true,
+														false,
+														false,
+														true,
+														true,
+														true,
+														true,
+														false,
+														true,
+														false,
+														false,
+														false,
+														false,
+														false
+													],
+													"list03": [
+														false,
+														false,
+														false,
+														true,
+														true,
+														false,
+														false,
+														false,
+														false,
+														false,
+														false,
+														false,
+														false,
+														false,
+														false
+													],
+													"list04": [
+														false,
+														false,
+														true,
+														false,
+														false,
+														false,
+														false,
+														false,
+														false,
+														false,
+														false,
+														false,
+														false,
+														false,
+														false
+													],
+													"buttonStack01": [
+														true,
+														false,
+														true,
+														true,
+														true
+													],
+													"buttonStack02": [
+														true,
+														false
+													]
+												},
+												{
+													"description": "This field can be used to a additional Information regarding the question",
+													"text": "Do you have any use cases with respect to granular AnaCredit data for further analytics?",
+													"relevance": 4,
+													"actions": [
+														{
+															"description": "Set up a new performance management tool",
+															"text": "Action 1",
+															"start": "01/01/2019",
+															"end": "01/02/2020",
+															"rotSlider01": 75,
+															"rotSlider02": 30,
+															"horzSlider01": 60,
+															"intInput01": 8,
+															"intInput02": 250,
+															"list01": [
+																false,
+																false,
+																false,
+																false,
+																false,
+																true,
+																false,
+																true,
+																true,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false
+															],
+															"list02": [
+																false,
+																false,
+																false,
+																true,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false
+															],
+															"list03": [
+																false,
+																false,
+																false,
+																false,
+																false,
+																true,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false
+															],
+															"list04": [
+																false,
+																false,
+																false,
+																true,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false
+															],
+															"buttonStack01": [
+																true,
+																true,
+																true,
+																true,
+																true
+															],
+															"buttonStack02": [
+																false,
+																true
+															]
+														},
+														}
+													]
+												}
+											]
+										{
+											"description": "Business Analytics and Information Technology (BAIT) covers information technology, data analysis and decision support, which are essential components of the modern enterprise.  ",
+											"text"
+											"BAIT",
+											"questions": [
+												{
+													"description": "This field can be used to a additional Information regarding the question",
+													"text": "Which specific actions have you planned for BAIT (since it became / becomes effective)?",
+													"relevace": 4,
+													"actions": [
+														{
+															"description": "Revision the IT Security concept",
+															"text": "Action 1",
+															"start": "01/04/2018",
+															"end": "01/11/2018",
+															"rotSlider01": 25,
+															"rotSlider02": 70,
+															"horzSlider01": 40,
+															"intInput01": 2,
+															"intInput02": 40,
+															"list01": [
+																true,
+																false,
+																true,
+																true,
+																true,
+																true,
+																true,
+																true,
+																true,
+																true,
+																true,
+																true,
+																false,
+																false,
+																false
+															],
+															"list02": [
+																false,
+																false,
+																false,
+																true,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false
+															],
+															"list03": [
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																true,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false
+															],
+															"list04": [
+																false,
+																false,
+																false,
+																false,
+																true,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false,
+																false
+															],
+															"buttonStack01": [
+																true,
+																false,
+																true,
+																false,
+																false
+															],
+															"buttonStack02": [
+																true,
+																false
+															]
+														},
+														{
+															"description": "This field can be used to a additional Information regarding the question",
+															"text": "What is your biggest security concern and what are your future security actions to address the related risks?",
+															"relevanc": 2,
+															"actions": [
+																{
+																	"description": "Loss of data; Invest in cyber security",
+																	"text": "Action 1",
+																	"start": "01/08/2018",
+																	"end": "01/11/2020",
+																	"rotSlider01": 60,
+																	"rotSlider02": 70,
+																	"horzSlider01": 60,
+																	"intInput01": 3,
+																	"intInput02": 400,
+																	"list01": [
+																		false,
+																		false,
+																		false,
+																		false,
+																		true,
+																		true,
+																		true,
+																		true,
+																		true,
+																		true,
+																		true,
+																		false,
+																		false,
+																		false,
+																		false
+																	],
+																	"list02": [
+																		true,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false,
+																		true,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false
+																	],
+																	"list03": [
+																		false,
+																		false,
+																		false,
+																		true,
+																		true,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false
+																	],
+																	"list04": [
+																		false,
+																		false,
+																		true,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false,
+																		false
+																	],
+																	"buttonStack01": [
+																		true,
+																		false,
+																		false,
+																		true,
+																		true
+																	],
+																	"buttonStack02": [
+																		true,
+																		true
+																	]
+																},
+																{
+																	"description": "This field can be used to a additional Information regarding the question",
+																	"text": "Information security management: How do you assure that your Information security policy is properly communicated within the institute?",
+																	"relevance"
+																	3,
+																	"actions": [
+																		{
+																			"description": "Develop regular information security workshops and trainings",
+																			"text": "Action 1",
+																			"start": "01/05/2018",
+																			"end": "01/10/2018",
+																			"rotSlider01": 40,
+																			"rotSlider02": 65,
+																			"horzSlider01": 20,
+																			"intInput01": 2,
+																			"intInput02": 50,
+																			"list01": [
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false
+																			],
+																			"list02": [
+																				false,
+																				false,
+																				false,
+																				true,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				true,
+																				false,
+																				false,
+																				false,
+																				false
+																			],
+																			"list03": [
+																				false,
+																				false,
+																				false,
+																				false,
+																				true,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false
+																			],
+																			"list04": [
+																				false,
+																				false,
+																				true,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false,
+																				false
+																			],
+																			"buttonStack01": [
+																				false,
+																				false,
+																				false,
+																				true,
+																				true
+																			],
+																			"buttonStack02": [
+																				false,
+																				false
+																			]
+																		},
+																		{
+																			"description": "This field can be used to a additional Information regarding the question",
+																			"text": "User access management: Do you plan projects with regard that proper and auditable assignment / modification / deletion of authorizations/user accesses management takes place within the company?",
+																			"relevance":,
+																			"actions": [
+																				{
+																					"description": "Renew user authorizations and access settings",
+																					"text": "Action 1",
+																					"start": "01/08/2018",
+																					"end": "01/01/2019",
+																					"rotSlider01": 10,
+																					"rotSlider02": 90,
+																					"horzSlider01": 30,
+																					"intInput01": 3,
+																					"intInput02": 70,
+																					"list01": [
+																						true,
+																						false,
+																						true,
+																						true,
+																						true,
+																						true,
+																						true,
+																						true,
+																						true,
+																						true,
+																						true,
+																						false,
+																						false,
+																						false,
+																						false
+																					],
+																					"list02": [
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false
+																					],
+																					"list03": [
+																						false,
+																						false,
+																						false,
+																						true,
+																						true,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false
+																					],
+																					"list04": [
+																						false,
+																						false,
+																						true,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false,
+																						false
+																					],
+																					"buttonStack01": [
+																						false,
+																						false,
+																						false,
+																						true,
+																						true
+																					],
+																					"buttonStack02": [
+																						true,
+																						true
+																					]
+																				}
+																				{
+																					"description": "This field can be used to a additional Information regarding the question",
+																					"text": "IT projects: Are the IT projects adequately controlled in terms of their duration, resource consumption and quality? How do you improve your current controlling activities?",
+																					"relevance": 3,
+																					"actions": [
+																						{
+																							"description": "Projekt Controlling 2.0 - Set up an encompassing management controlling tool",
+																							"text": "Action 1",
+																							"start": "01/10/2018",
+																							"end": "01/10/2019",
+																							"rotSlider01": 90,
+																							"rotSlider02": 20,
+																							"horzSlider01": 70,
+																							"intInput01": 8,
+																							"intInput02": 300,
+																							"list01": [
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								true,
+																								false,
+																								true,
+																								true,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false
+																							],
+																							"list02": [
+																								false,
+																								false,
+																								false,
+																								true,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false
+																							],
+																							"list03": [
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								true,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false
+																							],
+																							"list04": [
+																								false,
+																								false,
+																								false,
+																								true,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false,
+																								false
+																							],
+																							"buttonStack01": [
+																								true,
+																								true,
+																								true,
+																								true,
+																								true
+																							],
+																							"buttonStack02": [
+																								false,
+																								false
+																							]
+																						}
+																						}
+																					]
+																				}
