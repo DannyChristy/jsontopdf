@@ -1,0 +1,19 @@
+# IntelliJ Idea:
+*.iml
+*.ipr
+*.iws
+.idea/
+
+
+# Maven:
+target/
+overlays/
+.m2/
+# maven 3.3 extensions
+# takari concurrent local repo
+.mvn/timing.properties
+
+# Eclipse:
+.classpath
+.project
+.settings/
