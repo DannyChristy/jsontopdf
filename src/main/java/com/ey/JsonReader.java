@@ -9,24 +9,50 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class JsonReader {
-    public File getFile() {
+    public List<File> getFile(JFrame jFrame) {
+        int fileCount=0;
+        List<File> selectedFileList = new ArrayList<>();
         final JFileChooser jFileChooser = new JFileChooser();
-        //jFileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-        jFileChooser.showSaveDialog(null);
+        jFileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+        jFileChooser.setMultiSelectionEnabled(true);
+        jFileChooser.showOpenDialog(jFrame);
+        //jFileChooser.showSaveDialog(null);
         //  jFileChooser.addChoosableFileFilte
         // r(new FileNameExtensionFilter("*.txt","txt"));
 
+        //jFileChooser.addChoosableFileFilter(new FileNameExtensionFilter("json files only","json"));
+     //   jFileChooser.setFileFilter(new FileNameExtensionFilter("json files only","json"));
 
-        if(isJsonFile(jFileChooser.getSelectedFile())){
-            return jFileChooser.getSelectedFile();
+
+        for (File selectedFile:jFileChooser.getSelectedFiles()
+             ) {
+            if(selectedFile.isDirectory()){
+                for (File fileInDirectory:selectedFile.listFiles()
+                     ) {
+                    if(isJsonFile(fileInDirectory)){
+                        selectedFileList.add(fileInDirectory);
+                        fileCount++;
+                    }
+                }
+            }
+
+            else if(isJsonFile(selectedFile)){
+                selectedFileList.add(selectedFile);
+                fileCount++;
+            }
         }
-        else
-        {
-            return null ;
+        if(fileCount!=0){
+            JOptionPane.showMessageDialog(jFileChooser,"You have selected "+fileCount+" JSON file(s). This would be converted to PDF");
         }
+        else{
+            JOptionPane.showMessageDialog(jFileChooser,"There were no JSON files in the selection");
+        }
+        return selectedFileList;
 
     }
 

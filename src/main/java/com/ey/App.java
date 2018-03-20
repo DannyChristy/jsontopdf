@@ -8,6 +8,8 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Hello world!
@@ -15,35 +17,53 @@ import java.io.IOException;
  */
 public class App 
 {
+    private static int filesConverted=0;
     private static File jsonFile=new  File("C:\\app\\DPA\\jsontopdf\\resources\\test1.json");
+    private static List<File> jsonFileList = new ArrayList<>();
     private static JFrame jFrame;
     public static GuiWindow window = new GuiWindow();
     private static JsonReader jsonReader = new JsonReader();
-    public PDFconvertor pdFconvertor = new PDFconvertor();
-    public static void main( String[] args ) throws IOException {
+    private static PDFconvertor pdfConvertor = new PDFconvertor();
+    public static void main( String[] args ) throws IOException, DocumentException {
 
         App app = new App() ;
-        System.out.println( "Hello World!" );
 
         jFrame= window.createGUI();
         app.addButton(jFrame);
 
-        if(jsonFile==null){
-            System.out.println("not json file in main");
-        }
+
+
+
+
 
   //      jsonReader.jsonSerilizer(null);
 
     }
 
     public void addButton(JFrame jFrame){
-        JButton selectButton = new JButton("Choose JSON File");
+        JButton selectButton = new JButton("Choose Folder");
         selectButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                jsonFile = jsonReader.getFile();
-                if(jsonFile==null){
-                    System.out.println("null file in button");
+                jsonFileList = jsonReader.getFile(jFrame);
+                if(jsonFileList==null){
+                    JOptionPane.showMessageDialog(jFrame,"Something has gone wrong in the processing of the JSON files. Try again later or contact Administrator if problem remains");
                 }
+                else{
+                    for (File jsonFile:jsonFileList
+                            ) {
+                        try {
+                            if(pdfConvertor.pdfWriterInitializer(jsonFile,jFrame)){
+                                filesConverted++;
+                            }
+                        } catch (IOException e1) {
+                            e1.printStackTrace();
+                        } catch (DocumentException e1) {
+                            e1.printStackTrace();
+                        }
+                    }
+                    JOptionPane.showMessageDialog(jFrame,filesConverted+" file(s) has  been successfully converted");
+                }
+
             }
         });
 
@@ -52,7 +72,7 @@ public class App
         convertButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try {
-                    pdFconvertor.savePDF(jsonReader.jsonSerilizer(jsonFile),jsonFile);
+                    pdfConvertor.savePDF(jsonReader.jsonSerilizer(jsonFile),jsonFile);
                 } catch (FileNotFoundException e1) {
                     e1.printStackTrace();
                 } catch (IOException e1) {

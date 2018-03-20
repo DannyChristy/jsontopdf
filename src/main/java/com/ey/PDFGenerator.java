@@ -1,29 +1,23 @@
 package com.ey;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.commons.io.FileUtils;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.Rectangle;
 import com.itextpdf.text.pdf.PdfWriter;
+import org.apache.commons.io.FileUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class PDFGenerator {
 
@@ -88,7 +82,7 @@ public class PDFGenerator {
   public static void main(String args[]) throws IOException, ParseException, DocumentException {
     PDFGenerator pdfGenerator = new PDFGenerator();
 
-    File file = new File("C:\\app\\DPA\\jsontopdf\\resources\\test1.json");
+    File file = new File("resources/test1.json");
     String content = FileUtils.readFileToString(file,"utf-8");
 
     ObjectMapper objectMapper = new ObjectMapper();
@@ -99,7 +93,7 @@ public class PDFGenerator {
 
 
     JSONParser jsonParser= new JSONParser();
-    Object parse = jsonParser.parse(new FileReader("C:\\app\\DPA\\jsontopdf\\resources\\test1.json"));
+    Object parse = jsonParser.parse(new FileReader("resources/test1.json"));
     JSONObject jsonObject = new JSONObject(content);
     File pdfFile = jsonTopdf(jsonObject);
   }

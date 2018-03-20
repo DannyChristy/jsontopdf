@@ -1,18 +1,22 @@
 package com.ey;
 
+import com.github.wnameless.json.flattener.JsonFlattener;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfWriter;
 import org.apache.commons.io.FilenameUtils;
 
+import javax.swing.*;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Stream;
+import java.util.Scanner;
 
 public class PDFconvertor {
   private static final Map<String,String> PDF_MAP= new HashMap<String, String>();
+
+
   public File createPDF(String fileName) throws IOException {
-    File file = new File("resources\\" + fileName + ".pdf");
+    File file = new File("//home//vini//coremedia//jsontopdfDan//resources//" + "test_json_CFO" + ".pdf");
     if (file.exists()) {
       System.out.println("Existing file deleted");
       file.delete();
@@ -27,6 +31,60 @@ public class PDFconvertor {
       return null;
     }
 
+  }
+
+  public Map<String,Object> jsonSerializer(File jsonFile){
+      try{
+          Scanner scanner = new Scanner(jsonFile);
+          String json = scanner.useDelimiter("\\A").next();
+          scanner.close();
+
+          Map<String,Object> flattenedJson = JsonFlattener.flattenAsMap(json);
+          return flattenedJson;
+      }
+      catch (Exception e){
+          return null;
+      }
+
+
+  }
+
+  public Boolean pdfWriterInitializer(File jsonFile, JFrame jFrame) throws IOException, DocumentException {
+      Map<String, Object> serializedJSONMap = jsonSerializer(jsonFile);
+      File pdfFile = createPDF(jsonFile.getName());
+      pdfFile= intializePDF(pdfFile);
+      pdfFile = writeJSON(pdfFile,serializedJSONMap);
+      return true;
+  }
+
+    private File writeJSON(File pdfFile, Map<String, Object> serializedJSONMap) throws FileNotFoundException, DocumentException {
+        FileOutputStream fileOutputStream = new FileOutputStream(pdfFile);
+        Document document = new Document();
+        PdfWriter.getInstance(document, fileOutputStream);
+        document.open();
+        Paragraph elements = new Paragraph();
+        elements.add("someline");
+        elements.add("someother line");
+        document.add(elements);
+        document.close();
+      return pdfFile;
+    }
+
+    public File intializePDF(File pdfFile) throws IOException, DocumentException {
+
+      FileOutputStream fileOutputStream = new FileOutputStream(pdfFile);
+      Document document = new Document();
+      PdfWriter.getInstance(document, fileOutputStream);
+      document.open();
+
+      /*
+       * adding the logo on the pdf
+       * */
+      Image image = Image.getInstance("resources/download.png");
+      image.setAlignment(Image.RIGHT);
+      document.add(image);
+      document.close();
+      return pdfFile;
   }
 
   public void savePDF(Map<String, Object> stringObjectMap, File jsonFile) throws IOException, DocumentException {
