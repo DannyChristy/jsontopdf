@@ -1,7 +1,10 @@
 package com.ey;
 
+import com.ey.document.JSONDocument;
 import com.github.wnameless.json.flattener.JsonFlattener;
 import com.itextpdf.text.*;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import org.apache.commons.io.FilenameUtils;
 
@@ -16,7 +19,7 @@ public class PDFconvertor {
 
 
   public File createPDF(String fileName) throws IOException {
-    File file = new File("//home//vini//coremedia//jsontopdfDan//resources//" + "test_json_CFO" + ".pdf");
+    File file = new File("resources//" + "test_json_CFO" + ".pdf");
     if (file.exists()) {
       System.out.println("Existing file deleted");
       file.delete();
@@ -40,6 +43,11 @@ public class PDFconvertor {
           scanner.close();
 
           Map<String,Object> flattenedJson = JsonFlattener.flattenAsMap(json);
+          for (Map.Entry<String,Object> item:flattenedJson.entrySet()
+               ) {
+              System.out.println(item.getKey()+":"+item.getValue());
+          }
+          //System.out.println(flattenedJson.toString());
           return flattenedJson;
       }
       catch (Exception e){
@@ -57,6 +65,11 @@ public class PDFconvertor {
       return true;
   }
 
+
+
+
+
+    //Not used
     private File writeJSON(File pdfFile, Map<String, Object> serializedJSONMap) throws FileNotFoundException, DocumentException {
         FileOutputStream fileOutputStream = new FileOutputStream(pdfFile);
         Document document = new Document();
@@ -70,6 +83,7 @@ public class PDFconvertor {
       return pdfFile;
     }
 
+    //not used
     public File intializePDF(File pdfFile) throws IOException, DocumentException {
 
       FileOutputStream fileOutputStream = new FileOutputStream(pdfFile);
@@ -181,4 +195,33 @@ public class PDFconvertor {
   private String getBaseFileName(File file) {
     return FilenameUtils.getBaseName(file.getName());
   }
+
+    public void createFromJSONDocument(JSONDocument jsonDocument) throws IOException, DocumentException {
+      File pdfFile = createPDF(null);
+        if (pdfFile != null) {
+            FileOutputStream fileOutputStream = new FileOutputStream(pdfFile);
+            Document document = new Document();
+            PdfWriter.getInstance(document, fileOutputStream);
+            document.open();
+            Image image = Image.getInstance("resources/download.png");
+            image.setAlignment(Image.RIGHT);
+            document.add(image);
+            Paragraph paragraph= new Paragraph();
+            paragraph.add(jsonDocument.getSessionInfo().getClientName());
+            paragraph.setAlignment(Element.ALIGN_CENTER);
+            document.add(paragraph);
+            PdfPTable pdfPTable = new PdfPTable(2);
+            PdfPCell pdfPCell= new PdfPCell(new Phrase("some cell parameter"));
+            pdfPTable.addCell(pdfPCell);
+            pdfPTable.addCell("Session Info");
+            pdfPTable.addCell(jsonDocument.sessionInfo.getClientLogoPath());
+            pdfPTable.addCell("spmething to fill up space");
+            document.add(pdfPTable);
+            document.close();
+
+            System.out.println("pdf written");
+
+
+        }
+    }
 }

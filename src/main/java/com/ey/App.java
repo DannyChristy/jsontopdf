@@ -1,13 +1,14 @@
 package com.ey;
 
+import com.ey.document.JSONDocument;
+import com.ey.document.SessionInfo;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.itextpdf.text.DocumentException;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,12 +28,20 @@ public class App
     public static void main( String[] args ) throws IOException, DocumentException {
 
         App app = new App() ;
+        ObjectMapper objectMapper= new ObjectMapper();
+        //jFrame=
+        // window.createGUI();
+        //app.addButton(jFrame);
 
-        jFrame= window.createGUI();
-        app.addButton(jFrame);
 
 
+        Reader jsonreader =  new FileReader("C:\\Users\\dedvall1\\IdeaProjects\\jsontopdf\\resources\\CFO Space Open Day_v03.json");
+        JSONDocument jsonDocument= objectMapper.readValue(jsonreader,JSONDocument.class);
+        SessionInfo sessionInfo=jsonDocument.getSessionInfo();
+        System.out.println(sessionInfo.getClientName()+"\n"+sessionInfo.getClientLogoPath());
+        System.out.println(jsonDocument.getSessionInfo());
 
+        pdfConvertor.createFromJSONDocument(jsonDocument);
 
 
 
