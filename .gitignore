@@ -1,0 +1,16 @@
+*.iml
+*.ipr
+*.iws
+.idea/
+# maven:
+target/
+overlays/
+# eclipse:
+.classpath
+.project
+.settings/
+# Logs:
+*.log
+*.out
+# git:
+*.orig
